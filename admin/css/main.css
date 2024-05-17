@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #f6f9ff;
+    color: #444444;
+}
+
+a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f9fb;
+    transition: opacity 0.6s, visibility 0.6s;
+    z-index: 99;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after {
+    content: "";
+    width: 70px;
+    height: 70px;
+    border: 6px solid #dddddd;
+    border-top-color: #212529;;
+    border-radius: 50%;
+    animation: loading 0.6s ease infinite;
+}
+
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+.sidebar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 996;
+    transition: all 0.3s;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #aab7cf transparent;
+    box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+    background-color: #fff;
+}
+
+.pagetitle {
+    margin-bottom: 10px;
+}
+
+.info img{
+    width: 130px;
+}
+
+.main{
+    margin-top: 60px;
+    padding: 20px 30px;
+    transition: all 0.3s;
+    margin-left: 300px;
+    background-color: #f6f9ff;
+}
+
+.header{
+    height: 60px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+    padding: 0 20px;
+    line-height: 60px;
+    background: #fff;
+}
+
+.user{
+    display: flex;
+    justify-content: end;
+}
+
+.user a {
+    position: relative;
+}
+
+.user p{
+    margin-right: 10px;
+    color: red;
+}
+.user p span{
+    color: #000;
+}
+
+.content{
+    
+    padding: 0 20px;
+    text-align: start;
+}
+.add{
+    width: 100%;
+    text-align: start;
+}
+
+.datatable-container {
+	border-top: 1px solid #d9d9d9;
+}
+.datatable-table {
+    max-width: 100%;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+}
